@@ -1,0 +1,22 @@
+' Gambas module file
+
+Export
+
+Public Sub CenterInParent(hControl As Control)
+
+  CenterInParentX(hControl)
+  CenterInParentY(hControl)
+
+End
+
+Public Sub CenterInParentY(hControl As Control)
+
+  hControl.Y = (hControl.Parent.ClientH - hControl.H) / 2
+
+End
+
+Public Sub CenterInParentX(hControl As Control)
+
+  hControl.X = (hControl.Parent.ClientW - hControl.W) / 2
+
+End

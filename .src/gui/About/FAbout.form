@@ -1,0 +1,90 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,54,32)
+  Expand = True
+  Text = ("About")
+  Icon = Picture["logo.png"]
+  Resizable = False
+  SkipTaskbar = True
+  Arrangement = Arrange.Vertical
+  Spacing = True
+  Margin = True
+  { HBox2 HBox
+    MoveScaled(3,3,40,19)
+    Expand = True
+    AutoResize = True
+    { PictureBox1 PictureBox
+      MoveScaled(0,0,12,6)
+      Picture = Picture[".icon.png"]
+      AutoResize = True
+      Alignment = Align.TopNormal
+    }
+    { Panel2 Panel
+      MoveScaled(10,1,2,8)
+    }
+    { VBox1 VBox
+      MoveScaled(13,1,27,17)
+      Expand = True
+      AutoResize = True
+      Indent = True
+      { Label1 Label
+        MoveScaled(0,1,24,4)
+        Font = Font["+8"]
+        AutoResize = True
+        Text = ("Label1")
+      }
+      { txtAppDescription TextBox
+        MoveScaled(0,5,24,3)
+        Background = Color.Background
+        NoTabFocus = True
+        ReadOnly = True
+        Border = False
+      }
+      { UrlLabel1 UrlLabel UrlLabel
+        Name = "UrlLabel1"
+        MoveScaled(1,8,24,4)
+        Text = ("UrlLabel1")
+      }
+      { txtAppCopyright TextBox
+        MoveScaled(1,12,24,3)
+        Font = Font["-1"]
+        Background = Color.Background
+        NoTabFocus = True
+        ReadOnly = True
+        Border = False
+      }
+      { UrlLabel2 UrlLabel UrlLabel
+        Name = "UrlLabel2"
+        MoveScaled(3,15,24,4)
+        AutoResize = True
+        Text = ("GNU GENERAL PUBLIC LICENSE")
+        Url = "https://www.gnu.org/copyleft/gpl.html"
+      }
+    }
+  }
+  { HBox1 HBox
+    MoveScaled(1,24,43,4)
+    Spacing = True
+    { tbtThanks ToggleButton
+      MoveScaled(0,0,16,4)
+      Visible = False
+      Text = ("Thanks")
+    }
+    { tbtLicense ToggleButton
+      MoveScaled(16,0,16,4)
+      Visible = False
+      Text = ("License")
+    }
+    { Panel1 Panel
+      MoveScaled(39,0,4,4)
+      Expand = True
+    }
+    { btnOK Button
+      MoveScaled(43,0,16,4)
+      Text = ("Close")
+      Default = True
+      Cancel = True
+    }
+  }
+}

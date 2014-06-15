@@ -1,4 +1,4 @@
 gambas-libpkcommons
 ===================
 
-Utility library for Gambas Applications
+Utility Library for Gambas Applications
