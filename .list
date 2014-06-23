@@ -1,5 +1,8 @@
 CCircularInt
 FAbout
+FColorChooser
+FFontChooser
+MArrays
 MCollections
 MGuiUtils
 UrlLabel

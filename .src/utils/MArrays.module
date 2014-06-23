@@ -1,0 +1,9 @@
+' Gambas module file
+
+Export
+
+Public Function BoolToIndex(Value As Boolean) As Integer
+
+  Return Abs(CInt(Value))
+
+End

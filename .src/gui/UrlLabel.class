@@ -11,7 +11,7 @@ Public Sub _new()
 
   With Me
     .Font.Underline = True
-    .Foreground = &H0000FF&
+    '.Foreground = &H0000FF&
     .Mouse = Mouse.Pointing
     .AutoResize = True
   End With
