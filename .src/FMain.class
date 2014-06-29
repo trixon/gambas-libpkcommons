@@ -6,4 +6,13 @@ End
 
 Public Sub Form_Open()
 
+  Dim aResult As Integer[]
+  Dim i As Integer
+
+  aResult = MArrays.ConvertStringToIntarray("8,1-3,7-9,12")
+  For Each i In aResult
+    Print i,
+  Next
+  Me.Close
+
 End
