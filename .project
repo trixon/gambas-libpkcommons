@@ -1,11 +1,12 @@
 # Gambas Project File 3.0
-# Compiled with Gambas 3.5.3
+# Compiled with Gambas 3.5.4
 Title=libpkcommons
 Startup=FMain
-Version=0.0.4
+Version=0.0.8
 Component=gb.image
 Component=gb.gui
 Component=gb.form
+Component=gb.desktop
 Description="Utility Library for Gambas Applications"
 Authors="Patrik Karlsson"
 TabSize=2

@@ -13,7 +13,6 @@
   { HBox2 HBox
     MoveScaled(3,3,40,19)
     Expand = True
-    AutoResize = True
     { PictureBox1 PictureBox
       MoveScaled(0,0,12,6)
       Picture = Picture[".icon.png"]
@@ -26,11 +25,10 @@
     { VBox1 VBox
       MoveScaled(13,1,27,17)
       Expand = True
-      AutoResize = True
       Indent = True
       { Label1 Label
         MoveScaled(0,1,24,4)
-        Font = Font["+8"]
+        Font = Font["+5"]
         AutoResize = True
         Text = ("Label1")
       }

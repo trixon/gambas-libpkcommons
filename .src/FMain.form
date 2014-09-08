@@ -1,6 +1,9 @@
 # Gambas Form File 3.0
 
-{ FMain Form
+{ Form Form
   MoveScaled(0,0,50,50)
+  { Button1 Button
+    MoveScaled(1,2,16,4)
+    Text = ("About")
+  }
 }
-
