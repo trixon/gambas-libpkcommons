@@ -62,7 +62,7 @@
     }
   }
   { HBox1 HBox
-    MoveScaled(1,24,43,4)
+    MoveScaled(1,24,52,4)
     Spacing = True
     { tbtThanks ToggleButton
       MoveScaled(0,0,16,4)
@@ -80,6 +80,7 @@
     }
     { btnOK Button
       MoveScaled(43,0,16,4)
+      AutoResize = True
       Text = ("Close")
       Default = True
       Cancel = True
