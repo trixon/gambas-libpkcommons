@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,54,32)
+  MoveScaled(0,0,57,32)
   Expand = True
   Text = ("About")
   Icon = Picture["logo.png"]
@@ -26,7 +26,7 @@
       MoveScaled(13,1,27,17)
       Expand = True
       Indent = True
-      { Label1 Label
+      { lblName Label
         MoveScaled(0,1,24,4)
         Font = Font["+5"]
         AutoResize = True
@@ -39,8 +39,8 @@
         ReadOnly = True
         Border = False
       }
-      { UrlLabel1 UrlLabel UrlLabel
-        Name = "UrlLabel1"
+      { ublAppUrl UrlLabel UrlLabel
+        Name = "ublAppUrl"
         MoveScaled(1,8,24,4)
         Text = ("UrlLabel1")
       }
@@ -52,8 +52,8 @@
         ReadOnly = True
         Border = False
       }
-      { UrlLabel2 UrlLabel UrlLabel
-        Name = "UrlLabel2"
+      { ublLicense UrlLabel UrlLabel
+        Name = "ublLicense"
         MoveScaled(3,15,24,4)
         AutoResize = True
         Text = ("GNU GENERAL PUBLIC LICENSE")

@@ -170,10 +170,10 @@ End
 
 Public Sub Form_Open()
 
-  Label1.Text = Me.AppName & " " & Me.AppVersion
+  lblName.Text = Me.AppName & " " & Me.AppVersion
   txtAppDescription.Text = Me.AppDescription
-  UrlLabel1.Url = Me.AppUrlLink
-  UrlLabel1.Text = Me.AppUrlText
+  ublAppUrl.Url = Me.AppUrlLink
+  ublAppUrl.Text = Me.AppUrlText
   txtAppCopyright.Text = Me.AppCopyright
 
 End
