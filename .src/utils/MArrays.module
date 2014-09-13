@@ -34,3 +34,20 @@ Public Function ConvertStringToIntArray(sArgs As String) As Integer[]
   Return aResult
 
 End
+
+Public Function FilterStringArray(aStrings As String[], sFilter As String) As String[]
+
+  Dim sString As String
+  Dim aResult As New String[]
+
+  If Not sFilter Then Return aStrings
+
+  For Each sString In aStrings
+    If String.InStr(sString, sFilter, 0, gb.IgnoreCase) > 0 Then
+      aResult.Add(sString)
+    Endif
+  Next
+
+  Return aResult
+
+End
