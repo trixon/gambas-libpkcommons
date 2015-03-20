@@ -1,7 +1,7 @@
 # Gambas Form File 3.0
 
 { Form Form
-  MoveScaled(0,0,57,32)
+  MoveScaled(0,0,58,32)
   Expand = True
   Text = ("About")
   Icon = Picture["logo.png"]
@@ -56,8 +56,8 @@
         Name = "ublLicense"
         MoveScaled(3,15,24,4)
         AutoResize = True
+        Link = "http://www.gnu.org/copyleft/gpl.html"
         Text = ("GNU GENERAL PUBLIC LICENSE")
-        Url = "https://www.gnu.org/copyleft/gpl.html"
       }
     }
   }

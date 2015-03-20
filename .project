@@ -1,14 +1,26 @@
 # Gambas Project File 3.0
-# Compiled with Gambas 3.5.4
+# Compiled with Gambas 3.7.0
 Title=libpkcommons
-Startup=FMain
-Version=0.0.13
+Startup=MMain
+Version=0.1.6
 Component=gb.image
 Component=gb.gui
 Component=gb.form
+Component=gb.desktop.x11
 Component=gb.desktop
 Description="Utility Library for Gambas Applications"
 Authors="Patrik Karlsson"
 TabSize=2
+Language=sv
+KeepDebugInfo=0
 Type=Library
+Maintainer=Patrik Karlsson
+Vendor=Trixon
+Address=patrik@trixon.se
+Url=www.trixon.se
+License=General Public License
+PackageName=libpkcommons-0.1.2
+CreateEachDirectory=1
 Packager=1
+Systems=ubuntu
+Groups=ubuntu:"libs"

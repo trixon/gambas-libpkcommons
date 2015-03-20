@@ -25,161 +25,165 @@ Private $hAppLogo As Picture
 Private $sAppVersion As String = Application.Version
 
 Public Sub _new()
-
+  
 End
 
 Public Sub Run() As Boolean
-
+  
   Return Not Me.ShowModal()
-
+  
 End
 
 Public Sub btnOK_Click()
-
+  
   Me.Close(True)
-
+  
 End
 
 Public Sub btnCancel_Click()
-
+  
   Me.Close
-
+  
 End
 
 Private Function AppAuthor_Read() As String
-
+  
   Return $sAppAuthor
-
+  
 End
 
 Private Sub AppAuthor_Write(Value As String)
-
+  
   $sAppAuthor = Value
-
+  
 End
 
 Private Function AppUrlLink_Read() As String
-
+  
   Return $sAppUrlLink
-
+  
 End
 
 Private Sub AppUrlLink_Write(Value As String)
-
+  
   $sAppUrlLink = Value
-
+  
 End
 
 Private Function AppUrlText_Read() As String
-
+  
   Return $sAppUrlText
-
+  
 End
 
 Private Sub AppUrlText_Write(Value As String)
-
+  
   $sAppUrlText = Value
-
+  
 End
 
 Private Function AppCopyright_Read() As String
-
+  
   Return $sAppCopyright
-
+  
 End
 
 Private Sub AppCopyright_Write(Value As String)
-
+  
   $sAppCopyright = Value
-
+  
 End
 
 Private Function AppCredits_Read() As String
-
+  
   Return $sAppCredits
-
+  
 End
 
 Private Sub AppCredits_Write(Value As String)
-
+  
   $sAppCredits = Value
-
+  
 End
 
 Private Function AppDescription_Read() As String
-
+  
   Return $sAppDescription
-
+  
 End
 
 Private Sub AppDescription_Write(Value As String)
-
+  
   $sAppDescription = Value
-
+  
 End
 
 Private Function AppName_Read() As String
-
+  
   Return $sAppName
-
+  
 End
 
 Private Sub AppName_Write(Value As String)
-
+  
   $sAppName = Value
-
+  
 End
 
 Private Function AppLicense_Read() As String
-
+  
   Return $sAppLicense
-
+  
 End
 
 Private Sub AppLicense_Write(Value As String)
-
+  
   $sAppLicense = Value
-
+  
 End
 
 Private Function AppLogo_Read() As Picture
-
+  
   Return $hAppLogo
-
+  
 End
 
 Private Sub AppLogo_Write(Value As Picture)
-
+  
   $hAppLogo = Value
-
+  
   PictureBox1.Picture = Value
-
+  
 End
 
 Private Function AppVersion_Read() As String
-
+  
   Return $sAppVersion
-
+  
 End
 
 Private Sub AppVersion_Write(Value As String)
-
+  
   $sAppVersion = Value
-
+  
 End
 
 Public Sub Form_Open()
-
+  
   lblName.Text = Me.AppName & " " & Me.AppVersion
   txtAppDescription.Text = Me.AppDescription
-  ublAppUrl.Url = Me.AppUrlLink
+  ublAppUrl.Link = Me.AppUrlLink
   ublAppUrl.Text = Me.AppUrlText
   txtAppCopyright.Text = Me.AppCopyright
-
+  
 End
 
 Public Sub UrlLabel_MouseUp()
-
+  
   Desktop.Open(Last.Url)
+  
+End
 
+Public Sub URLLabel1_Click()
+  
 End
