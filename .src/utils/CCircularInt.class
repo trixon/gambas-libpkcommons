@@ -7,59 +7,59 @@ Private $iMax As Integer
 Private $iValue As Integer
 
 Public Sub _new({Min} As Integer, {Max} As Integer, Optional Value As Integer = 0)
-
+  
   $iMin = {Min}
   $iMax = {Max}
   $iValue = Value
-
+  
 End
 
 Public Function Dec() As Integer
-
+  
   $iValue = PeekPrev()
   Return $iValue
-
+  
 End
 
 Public Function Inc() As Integer
-
+  
   $iValue = PeekNext()
   Return $iValue
-
+  
 End
 
 Public Function PeekNext() As Integer
-
+  
   Dim iPeek As Integer = $iValue + 1
-
+  
   If iPeek > $iMax Then
     iPeek = 0
   Endif
-
+  
   Return iPeek
-
+  
 End
 
 Public Function PeekPrev() As Integer
-
+  
   Dim iPeek As Integer = $iValue - 1
-
+  
   If iPeek < $iMin Then
     iPeek = $iMax
   Endif
-
+  
   Return iPeek
-
+  
 End
 
 Private Function Value_Read() As Integer
-
+  
   Return $iValue
-
+  
 End
 
 Private Sub Value_Write(Value As Integer)
-
+  
   $iValue = Min($iMax, Max($iMin, Value))
-
+  
 End

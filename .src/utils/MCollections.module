@@ -4,32 +4,32 @@ Export
 Fast
 
 Public Function Equals(aFirst As Integer[], aSecond As Integer[]) As Boolean
-
+  
   Dim i As Integer
   Dim bResult As Boolean = True
   Dim aSortedFirst As Integer[]
   Dim aSortedSecond As Integer[]
-
+  
   If aFirst.Length <> aSecond.Length Then Return False
-
+  
   aSortedFirst = aFirst.Copy()
   aSortedFirst.Sort()
   aSortedSecond = aSecond.Copy()
   aSortedSecond.Sort()
-
+  
   For i = 0 To aSortedFirst.Max
     If aSortedFirst[i] <> aSortedSecond[i] Then
       bResult = False
       Break
     Endif
   Next
-
+  
   Return bResult
-
+  
 End
 
 Public Function FindLargestSequence(aArray As Integer[]) As Integer[]
-
+  
   Dim i As Integer
   Dim aResult As Integer[]
   Dim aUniqueValues As New Integer[]
@@ -37,15 +37,15 @@ Public Function FindLargestSequence(aArray As Integer[]) As Integer[]
   Dim iLength As Integer
   Dim iTempStart As Integer
   Dim iTempLength As Integer = 1
-
+  
   For i = 0 To aArray.Max
     If Not aUniqueValues.Exist(aArray[i]) Then
       aUniqueValues.Add(aArray[i])
     Endif
   Next
-
+  
   aUniqueValues.Sort
-
+  
   For i = 1 To aUniqueValues.Max
     If aUniqueValues[i] - aUniqueValues[i - 1] = 1 Then
       Inc iTempLength
@@ -54,49 +54,49 @@ Public Function FindLargestSequence(aArray As Integer[]) As Integer[]
         iStart = iTempStart
         iLength = iTempLength
       Endif
-
+      
       iTempStart = i
       iTempLength = 1
     Endif
   Next
-
+  
   If iTempLength > iLength Then
     iStart = iTempStart
     iLength = iTempLength
   Endif
-
+  
   aResult = aUniqueValues.Copy(iStart, iLength)
-
+  
   Return aResult
-
+  
 End
 
 Public Function Frequency(avValues As Variant, vValue As Variant) As Integer
-
+  
   Dim i As Integer
   Dim iFrequency As Integer
-
+  
   For i = 0 To avValues.Max
     If avValues[i] = vValue Then
       Inc iFrequency
     Endif
   Next
-
+  
   Return iFrequency
-
+  
 End
 
 Public Function FrequencyInteger(aArray As Integer[], iValue As Integer) As Integer
-
+  
   Dim i As Integer
   Dim iFrequency As Integer
-
+  
   For i = 0 To aArray.Max
     If aArray[i] = iValue Then
       Inc iFrequency
     Endif
   Next
-
+  
   Return iFrequency
-
+  
 End

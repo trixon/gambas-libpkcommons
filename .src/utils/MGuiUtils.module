@@ -3,39 +3,39 @@
 Export
 
 Public Sub CenterInParent(hControl As Control)
-
+  
   CenterInParentX(hControl)
   CenterInParentY(hControl)
-
+  
 End
 
 Public Sub CenterInParentY(hControl As Control)
-
+  
   hControl.Y = (hControl.Parent.ClientH - hControl.H) / 2
-
+  
 End
 
 Public Sub CenterInParentX(hControl As Control)
-
+  
   hControl.X = (hControl.Parent.ClientW - hControl.W) / 2
-
+  
 End
 
 Public Sub PaintRoundedRect(X As Integer, Y As Integer, W As Integer, H As Integer, R As Float)
-
+  
   Dim fArcToBezier As Float = 0.55228475
   Dim fRadiusX, fRadiusY, c1, c2 As Float
-
+  
   fRadiusX = R
   fRadiusY = R
-
+  
   If fRadiusX > W - fRadiusX Then fRadiusX = W / 2
   If fRadiusY > H - fRadiusY Then fRadiusY = H / 2
-
+  
   '#approximate(quite Close )the arc using a bezier curve
   c1 = fArcToBezier * fRadiusX
   c2 = fArcToBezier * fRadiusY
-
+  
   Paint.NewPath()
   Paint.MoveTo(x + fRadiusX, y)
   Paint.RelLineTo(w - 2 * fRadiusX, 0.0)
@@ -47,5 +47,5 @@ Public Sub PaintRoundedRect(X As Integer, Y As Integer, W As Integer, H As Integ
   Paint.RelLineTo(0, - h + 2 * fRadiusY)
   Paint.RelCurveTo(0.0, - c2, fRadiusX - c1, - fRadiusY, fRadiusX, - fRadiusY)
   Paint.ClosePath()
-
+  
 End

@@ -1,8 +1,8 @@
 # Gambas Project File 3.0
-# Compiled with Gambas 3.7.0
+# Compiled with Gambas 3.8.0
 Title=libpkcommons
 Startup=MMain
-Version=0.1.6
+Version=0.1.8
 Component=gb.image
 Component=gb.gui
 Component=gb.form
