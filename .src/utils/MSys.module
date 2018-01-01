@@ -3,72 +3,72 @@
 Export
 
 Public Function CheckDependencies(aCommands As String[], Optional bDisplayDialog As Boolean = True) As Boolean
-  
+
   Dim aDependencyCheck As New String[]
   Dim sCommand As String
   Dim bResult As Boolean
-  
+
   For Each sCommand In aCommands
     If Not CommandInPath(sCommand) Then aDependencyCheck.Add(sCommand)
   Next
-  
+
   If aDependencyCheck.Length > 0 Then
     If bDisplayDialog Then
       Message.Title = ("Error")
       Message.Error(Subst(("Dependency not satisfied, please install\n&1."), aDependencyCheck.Join(", ")))
     Endif
-    
+
     bResult = False
   Else
     bResult = True
   Endif
-  
+
   Return bResult
-  
+
 End
 
 Public Function CommandInPath(sCommand As String) As Boolean
-  
+
   Dim sResult As String
-  
+
   Shell "which " & sCommand To sResult
-  
+
   Return sResult
-  
+
 End
 
 Public Function CharacterSets() As String[]
-  
+
   Dim sIconvList As String
   Dim aCharacterSets As String[]
-  
+
   Shell "iconv --list" To sIconvList
   sIconvList = Replace$(sIconvList, "//", "")
   aCharacterSets = Split(sIconvList, "\n")
   aCharacterSets.Remove(aCharacterSets.Max, 1)
-  
+
   Return aCharacterSets
-  
+
 End
 
 Public Function MimeEncoding(sFilePath As String) As String
-  
+
   Dim sResult As String
-  
+
   Shell "file --brief --mime-encoding " & sFilePath To sResult
   sResult = Trim(Upper(sResult))
-  
+
   Return sResult
-  
+
 End
 
 Public Function MimeType(sFilePath As String) As String
-  
+
   Dim sResult As String
-  
+
   Shell "file --brief --mime-type " & sFilePath To sResult
   sResult = Trim(sResult)
-  
+
   Return sResult
-  
+
 End

@@ -3,13 +3,13 @@
 Export
 
 Public Function BoolToIndex(Value As Boolean) As Integer
-  
+
   Return Abs(CInt(Value))
-  
+
 End
 
 Public Function ConvertStringToIntArray(sArgs As String) As Integer[]
-  
+
   Dim aResult As New Integer[]
   Dim aArgs As String[] = Split(sArgs, ",")
   Dim aInterval As String[]
@@ -17,37 +17,37 @@ Public Function ConvertStringToIntArray(sArgs As String) As Integer[]
   Dim iStart As Integer
   Dim iStop As Integer
   Dim i As Integer
-  
+
   For Each sArg In aArgs
     Try aResult.Add(CInt(sArg))
     If Error Then
       aInterval = Split(sArg, "-")
       iStart = Min(CInt(Trim(aInterval[0])), CInt(Trim(aInterval[1])))
       iStop = Max(CInt(Trim(aInterval[0])), CInt(Trim(aInterval[1])))
-      
+
       For i = iStart To iStop
         aResult.Add(i)
       Next
     Endif
   Next
-  
+
   Return aResult
-  
+
 End
 
 Public Function FilterStringArray(aStrings As String[], sFilter As String) As String[]
-  
+
   Dim sString As String
   Dim aResult As New String[]
-  
+
   If Not sFilter Then Return aStrings
-  
+
   For Each sString In aStrings
     If String.InStr(sString, sFilter, 0, gb.IgnoreCase) > 0 Then
       aResult.Add(sString)
     Endif
   Next
-  
+
   Return aResult
-  
+
 End

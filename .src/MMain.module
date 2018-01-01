@@ -1,38 +1,38 @@
 ' Gambas module file
 
 Public Sub Main()
-  
+
   Print "libpkcommons.gambas library"
   ' TestConvertStringToIntarray()
   ' TestAbout()
   ' Print "end"
-  
+
 End
 
 Private Sub TestAbout()
-  
+
   Dim hForm As New FAbout
-  
+
   With hForm
     .AppAuthor = "Patrik Karlsson"
-    .AppCopyright = ("Copyright © 2014 Patrik Karlsson")
+    .AppCopyright = ("Copyright © 2018 Patrik Karlsson")
     .AppDescription = ("test")
     .AppLogo = Picture.Load(".icon.png")
   End With
-  
+
   hForm.Run()
-  
+
 End
 
 Private Sub TestConvertStringToIntarray()
-  
+
   Dim aResult As Integer[]
   Dim i As Integer
-  
+
   aResult = MArrays.ConvertStringToIntarray("8,1-3,7-9,12")
   For Each i In aResult
     Print i,
   Next
   Print
-  
+
 End
